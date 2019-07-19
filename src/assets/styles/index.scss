@@ -1,0 +1,68 @@
+@import './colors';
+@import './block';
+@import './top-menu';
+@import './percent-strip';
+@import './gallery';
+@import './icon-with-text';
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  color: $color-primary;
+}
+
+button, input, textarea, select {
+  outline: none;
+  font-family: Montserrat, sans-serif;
+  border-radius: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.align {
+  &-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  &-center {
+    align-items: center;
+    text-align: center;
+  }
+
+  &-right {
+    align-items: flex-end;
+  }
+}
+
+.btn {
+  height: 55px;
+  background-color: $color-active;
+  color: $color-light;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 0 45px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-active-hover;
+  }
+
+  &:active {
+    background-color: $color-active-click;
+  }
+}
+
+.justify-content-between {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}

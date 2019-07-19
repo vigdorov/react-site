@@ -1,0 +1,48 @@
+@import './colors';
+
+@media screen and (max-width: 630px) {
+  .top-menu__logo {
+    display: none;
+  }
+}
+
+.top-menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  background-color: $color-bg-secondary;
+  min-height: 60px;
+  padding: 0 5%;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 10;
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: $color-primary;
+    text-transform: uppercase;
+    margin: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-active;
+    }
+
+    &:active {
+      color: $color-active-click;
+    }
+  }
+}

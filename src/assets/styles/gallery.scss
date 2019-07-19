@@ -1,0 +1,57 @@
+@import './colors';
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 25%;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__over-img {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.75);
+      border: none;
+      color: #ffffff;
+    }
+  }
+
+  &__more {
+    height: 100px;
+    background-color: $color-bg-light-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: $color-secondary;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-bg-secondary;
+    }
+
+    &:active {
+      background-color: $color-active;
+      color: $color-light;
+    }
+  }
+}

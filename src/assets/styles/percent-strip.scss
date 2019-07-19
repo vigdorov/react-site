@@ -1,0 +1,32 @@
+@import './colors';
+
+.percent-strip {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-height: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 5px 0;
+    display: block;
+  }
+
+  &__body {
+    background-color: $color-bg-secondary;
+    max-width: 500px;
+    height: 3px;
+  }
+
+  &__active {
+    background-color: $color-active;
+    height: 3px;
+  }
+}

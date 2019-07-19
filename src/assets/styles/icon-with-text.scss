@@ -1,0 +1,46 @@
+@import './colors';
+
+.icon-with-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 930px) {
+  .icon-item-with-text__text {
+    font-size: 10px;
+    width: 200px;
+  }
+}
+
+.icon-item-with-text {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  min-width: 200px;
+
+  &__icon {
+    margin-right: 30px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  &__title {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    margin: 10px 0;
+    width: 300px;
+  }
+}
+
