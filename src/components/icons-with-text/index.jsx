@@ -12,7 +12,9 @@ const IconsWithText = props => {
               key={i}
               icon={item.icon}
               title={item.title}
-              text={item.text}/>
+              text={item.text}
+              iconPosition={props.iconPosition}
+            />
           );
         })
       }
@@ -26,8 +28,8 @@ IconsWithText.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       icon: PropTypes.object.isRequired,
-      title: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
+      title: PropTypes.string,
+      text: PropTypes.string
     })
   ).isRequired,
   iconPosition: PropTypes.oneOf(['left', 'top']),

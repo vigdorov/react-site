@@ -11,18 +11,25 @@
 @media screen and (max-width: 930px) {
   .icon-item-with-text__text {
     font-size: 10px;
-    width: 200px;
   }
 }
 
 .icon-item-with-text {
   display: flex;
   align-items: center;
-  margin: 10px auto;
-  min-width: 200px;
+  margin: 10px 10px;
+
+  &.top {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__icon {
-    margin-right: 30px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__body {
@@ -30,6 +37,11 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
+
+    &.top {
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -40,7 +52,7 @@
   &__text {
     text-transform: uppercase;
     margin: 10px 0;
-    width: 300px;
+    width: 200px;
   }
 }
 

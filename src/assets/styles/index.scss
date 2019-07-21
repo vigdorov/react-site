@@ -4,6 +4,9 @@
 @import './percent-strip';
 @import './gallery';
 @import './icon-with-text';
+@import './slider';
+@import './send-message';
+@import './modal';
 
 html, body {
   padding: 0;
@@ -42,20 +45,51 @@ button, input, textarea, select {
 
 .btn {
   height: 55px;
-  background-color: $color-active;
-  color: $color-light;
   border: none;
   border-radius: 0;
   text-transform: uppercase;
   padding: 0 45px;
   cursor: pointer;
+  margin: 0 5px;
 
-  &:hover {
-    background-color: $color-active-hover;
+  &-sm {
+    height: 35px;
+    padding: 0 20px;
+    min-width: 100px;
   }
 
-  &:active {
-    background-color: $color-active-click;
+  &-primary {
+    background-color: $color-active;
+    color: $color-light;
+
+    &:hover {
+      background-color: $color-active-hover;
+    }
+
+    &:active {
+      background-color: $color-active-click;
+    }
+  }
+
+  &-secondary {
+    background-color: $color-light;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-bg-light-secondary;
+    }
+
+    &:active {
+      background-color: $color-bg-secondary;
+    }
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: $color-secondary;
+    border: 1px solid $color-secondary;
+    opacity: 0.4;
+    cursor: no-drop;
   }
 }
 

@@ -1,0 +1,54 @@
+@import 'colors';
+
+.slider {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__quote {
+    font-size: 24px;
+  }
+  &__author {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__controls {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background-color: $color-light;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &-container {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:not(.active):hover {
+      transform: scale(1.5);
+      transition-duration: 250ms;
+      opacity: 0.8;
+    }
+
+    &.active {
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { itemsScope } from "./assets/data/items-for-blocks";
 import { advantage } from "./assets/data/advantage";
 import { gallery } from "./assets/data/gallery";
 import { company } from "./assets/data/company";
+import { slider } from "./assets/data/slider";
 
 import { ReactComponent as SignatureImg } from './assets/svg/signature.svg';
 
@@ -14,6 +15,8 @@ import TopMenu from "./components/top-menu";
 import PercentStrip from "./components/percent-strip";
 import Gallery from "./components/gallery";
 import IconsWithText from "./components/icons-with-text";
+import Slider from "./components/slider";
+import SendMessage from "./components/send-message";
 
 const App = () => {
   return (
@@ -27,7 +30,7 @@ const App = () => {
 about designing websites and mobile apps."
              background="secondary"
              contentAlign="right"
-             component={() => <button type="button" className="btn">Contact us</button>} />
+             component={() => <button type="button" className="btn btn-primary">Contact us</button>} />
 
       <Block header="About Us" text="Divide have don't man wherein air fourth. Own itself make have night won't make.
 A you under Seed appear which good give. Own give air without fowl moveth dry first
@@ -43,19 +46,19 @@ heaven fruit, dominion she'd won't very all." id={M.ABOUT}
       </Block>
 
       <Block background="active" id={M.PROCESS}>
-        <IconsWithText items={advantage} />
+        <IconsWithText items={advantage} iconPosition="left" />
       </Block>
 
       <Gallery images={gallery}/>
 
       <Block header="Our Work Process" text="Was years it seasons was there form he in in them together over that,
 third sixth gathered female creeping bearing behold years." id={M.SERVICES}>
-        <iframe width="560"
+        {/*<iframe width="560"
                 height="315"
                 src="https://www.youtube.com/embed/kYe7mImUa4Q"
                 frameBorder={0}
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen/>
+                allowFullScreen/>*/}
       </Block>
 
       <Block background="light-secondary">
@@ -63,7 +66,7 @@ third sixth gathered female creeping bearing behold years." id={M.SERVICES}>
       </Block>
 
       <Block background="active" id={M.TESTIMONIALS}>
-        Слайдер
+        <Slider items={slider}/>
       </Block>
 
       <Block>
@@ -72,13 +75,7 @@ third sixth gathered female creeping bearing behold years." id={M.SERVICES}>
 
       <Block header="Need a Project?" text="Let us know what you're looking for in an agency. We'll take a look and see
 if this could be the start of something beautiful." background="light-secondary" id={M.CONTACT}>
-        <div>
-          <input type="text" placeholder="Your Name"/>
-          <input type="text" placeholder="Your Email"/>
-        </div>
-        <input type="text" placeholder="Your Title"/>
-        <textarea rows="10" placeholder="Your Comment"/>
-        <button type="button" className="btn">Send message</button>
+        <SendMessage />
       </Block>
 
       <Block background="dark">

@@ -1,0 +1,40 @@
+@import './colors';
+
+@media screen and (max-width: 570px) {
+  .send-message {
+    &__row {
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.send-message {
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__input {
+    min-width: 200px;
+    box-sizing: border-box;
+    margin: 15px;
+    height: 50px;
+    padding: 0 20px;
+    border: none;
+    color: $color-secondary;
+  }
+
+  &__textarea {
+    margin: 15px 15px 35px 15px;
+    padding: 20px 20px;
+    border: none;
+    color: $color-secondary;
+  }
+}
